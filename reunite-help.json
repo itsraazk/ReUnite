@@ -1,0 +1,14 @@
+{
+  "topics": [
+    {"keys":["add pet","new pet","register pet","pet add"],"answer":"🐾 To add a pet, open the Pet section and choose Add Pet. Enter the requested pet details and save. ReUnite creates a unique QR Identity for that pet."},
+    {"keys":["qr","qr code","qr identity","qr identity kya","generate qr"],"answer":"🔖 A ReUnite QR is the pet's permanent identity. The QR itself stays the same while the pet profile and Lost/Safe status can change. From your pet details, use the QR option to generate/view it."},
+    {"keys":["lost dog","mark lost","lost pet","dog lost","i lost my dog"],"answer":"🚨 If your dog is lost, open that pet and use the Lost Pet option. Add the date/time, last-seen place, and useful details. The public QR profile can then show the dog as LOST and, while lost, allow a finder to start the protected finder-owner chat."},
+    {"keys":["found dog","mark found","safe","dog found","found pet"],"answer":"❤️ When your dog is safely back, open the pet's Lost/Found controls and mark the pet Found/Safe. The QR identity stays the same; the public profile changes back from the lost state."},
+    {"keys":["scanner","scan qr","camera","camera not working","scanner not working","qr scan"],"answer":"📷 ReUnite's scanner can use live camera when the browser allows it. Local Wi-Fi HTTP pages can block live camera access because camera APIs normally require a secure context. The local build also has a phone-camera capture fallback and manual Pet QR Identity entry."},
+    {"keys":["pet id","search pet id","reunite-dog","find pet"],"answer":"🔎 If you have the Pet QR Identity such as REUNITE-DOG-123456, you can use the Scanner page's manual Pet ID field to open the public pet profile."},
+    {"keys":["chat","finder chat","message finder","finder messages","lost messages"],"answer":"💬 Finder-owner chat is available only while a pet is marked LOST. A finder can start a protected conversation without creating an account, and the owner can reply from Lost Pet Messages. The owner's direct phone/email is not shown by default."},
+    {"keys":["login","sign up","signup","account","password"],"answer":"👤 ReUnite supports account creation and login. Signup collects your name and email, then you create a password. Account tools let you edit user details, manage pets, and log out."},
+    {"keys":["database","where data saved","data saved","local database"],"answer":"💾 In the local testing version, user/pet/message data is stored in data/reunite-db.json inside the ReUnite project folder. This is suitable for local testing, not for a public production deployment."},
+    {"keys":["phone","wifi","same wifi","mobile","phone testing"],"answer":"📱 For local phone testing, keep the computer and phone on the same Wi-Fi and open the Phone/Wi-Fi URL printed by npm start, for example http://192.168.x.x:3000. The local HTTP address is for testing; public deployment should use HTTPS."}
+  ]
+}

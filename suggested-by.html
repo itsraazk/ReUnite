@@ -1,0 +1,33 @@
+<!-- ReUnite file guide: Referral page: records who suggested ReUnite to the user. Keep this page structure intact; shared styles live in css/style.css and page behavior lives in app.js. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReUnite | Suggested By</title>
+  <link rel="stylesheet" href="css/style.css?v=fix20261128">
+</head>
+<body class="auth-page" data-page="suggested-by">
+<main class="auth-card">
+    <div class="page-icon">🤝</div>
+    <span class="eyebrow">ONE QUICK QUESTION</span>
+    <h1>Who suggested ReUnite to you?</h1>
+    <p class="muted">If someone recommended ReUnite to you, enter their name. This helps us understand how people are discovering ReUnite.</p>
+
+    <form action="/suggested-by" method="POST">
+      <div class="form-group">
+        <label for="suggested-by">Suggested by</label>
+        <input id="suggested-by" name="suggested_by" type="text" maxlength="120" placeholder="Enter their name" autocomplete="off">
+      </div>
+      <button class="btn btn-primary btn-wide" type="submit">Continue</button>
+    </form>
+
+    <form action="/suggested-by" method="POST" class="skip-referral-form">
+      <input type="hidden" name="skip" value="1">
+      <button class="btn btn-secondary btn-wide" type="submit">Skip for now</button>
+    </form>
+
+    <p class="bottom-note">You can provide or update this information the next time you log in.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- ReUnite file guide: Signup page: collects the new user account details. Keep this page structure intact; shared styles live in css/style.css and page behavior lives in app.js. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReUnite | Sign Up</title>
+  <link rel="stylesheet" href="css/style.css?v=fix20261128">
+</head>
+<body class="auth-page">
+<div class="auth-floating-messages" aria-hidden="true">
+  <div class="auth-float-card auth-float-1"><span class="auth-float-icon">❤️</span><div><strong>A Bond Like No Other</strong><p>Pets offer unconditional companionship, affection and acceptance without judgment.</p></div></div>
+  <div class="auth-float-card auth-float-2"><span class="auth-float-icon">🧠</span><div><strong>Love Has a Science</strong><p>Interacting with pets can trigger oxytocin, which is linked with bonding and trust.</p></div></div>
+  <div class="auth-float-card auth-float-3"><span class="auth-float-icon">🐶</span><div><strong>One Small Step Matters</strong><p>Registering your pet today can make finding them easier tomorrow.</p></div></div>
+</div>
+  <main class="auth-card">
+    <a class="back-link" href="index.html">← Back</a>
+    <div class="page-icon">👋</div>
+    <h1>Create your account</h1>
+    <p class="muted">Let's get you started with ReUnite.</p>
+
+    <form action="/signup" method="POST">
+      <div class="form-grid two-col">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input id="first-name" name="first_name" type="text" placeholder="First name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" name="last_name" type="text" placeholder="Last name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-grid two-col">
+        <div class="form-group">
+          <label for="state-code">State / Union Territory</label>
+          <select id="state-code" name="state_code" required>
+            <option value="" disabled selected>Select your state or UT</option>
+            <optgroup label="States"><option value="AP">Andhra Pradesh</option><option value="AR">Arunachal Pradesh</option><option value="AS">Assam</option><option value="BR">Bihar</option><option value="CG">Chhattisgarh</option><option value="GA">Goa</option><option value="GJ">Gujarat</option><option value="HR">Haryana</option><option value="HP">Himachal Pradesh</option><option value="JH">Jharkhand</option><option value="KA">Karnataka</option><option value="KL">Kerala</option><option value="MP">Madhya Pradesh</option><option value="MH">Maharashtra</option><option value="MN">Manipur</option><option value="ML">Meghalaya</option><option value="MZ">Mizoram</option><option value="NL">Nagaland</option><option value="OD">Odisha</option><option value="PB">Punjab</option><option value="RJ">Rajasthan</option><option value="SK">Sikkim</option><option value="TN">Tamil Nadu</option><option value="TS">Telangana</option><option value="TR">Tripura</option><option value="UP">Uttar Pradesh</option><option value="UK">Uttarakhand</option><option value="WB">West Bengal</option></optgroup><optgroup label="Union Territories"><option value="AN">Andaman and Nicobar Islands</option><option value="CH">Chandigarh</option><option value="DH">Dadra and Nagar Haveli and Daman and Diu</option><option value="DL">Delhi</option><option value="JK">Jammu and Kashmir</option><option value="LA">Ladakh</option><option value="LD">Lakshadweep</option><option value="PY">Puducherry</option></optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city-select">City / District</label>
+          <select id="city-select" name="city" required disabled><option value="" disabled selected>Select state first</option></select>
+        </div>
+      </div>
+      <div class="form-group" data-city-other hidden>
+        <label for="city-other">Your city / district</label>
+        <input id="city-other" name="city_other" type="text" maxlength="100" placeholder="Type your city or district">
+      </div>
+      <p class="small-note form-note">Your pets will receive a state-wise ReUnite ID, for example REUNITE-UP-583104.</p>
+      <button class="btn btn-primary btn-wide" type="submit">Continue</button>
+    </form>
+
+    <p class="bottom-note">Already have an account? <a href="login.html">Login</a></p>
+  </main>
+<script src="state-district.js?v=fix20261128"></script>
+<script>initStateDistrict({state:document.querySelector('#state-code'),city:document.querySelector('#city-select'),other:document.querySelector('#city-other')});</script>
+</body>
+</html>

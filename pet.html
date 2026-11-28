@@ -1,0 +1,62 @@
+<!-- ReUnite file guide: Pet hub: lists My Pets, Community Pets, and Memory Pets. Keep this page structure intact; shared styles live in css/style.css and page behavior lives in app.js. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReUnite | My Pets</title>
+  <link rel="stylesheet" href="css/style.css?v=fix20261128">
+</head>
+<body data-page="pets">
+<div class="app-shell">
+  <header class="simple-header"><a href="home.html">←</a><h2>My Pets</h2><a class="header-action" href="add-pet.html">＋</a></header>
+  <main class="content">
+      <div class="section-heading">
+        <div><span class="eyebrow">MY PETS</span><h1>Your pets</h1></div>
+        <a class="btn btn-primary" href="add-pet.html">+ Add Pet</a>
+      </div>
+      <!-- Add options: all three cards share the same layout and dimensions. -->
+      <section class="pet-choice-grid" aria-label="Choose what you want to add">
+        <a class="pet-choice-card" href="add-pet.html">
+          <span class="pet-choice-icon" aria-hidden="true">🐾</span>
+          <span class="pet-choice-title">Add Your Pet</span>
+          <span class="pet-choice-description">Register your own pet and create its ReUnite identity.</span>
+          <span class="pet-choice-action">Add pet <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="pet-choice-card" href="add-community-pet.html">
+          <span class="pet-choice-icon" aria-hidden="true">🏡</span>
+          <span class="pet-choice-title">Add Street Animals</span>
+          <span class="pet-choice-description">Record a familiar street animal and its usual public location.</span>
+          <span class="pet-choice-action">Add street animal <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="pet-choice-card" href="add-memorial.html">
+          <span class="pet-choice-icon" aria-hidden="true">🕊️</span>
+          <span class="pet-choice-title">Memory Pet</span>
+          <span class="pet-choice-description">Keep the story and favourite memories of a beloved pet.</span>
+          <span class="pet-choice-action">Remember a pet <span aria-hidden="true">→</span></span>
+        </a>
+      </section>
+
+      <div class="pet-list" data-pet-list></div>
+      <section class="card"><div class="section-heading"><div><span class="eyebrow">FIND A FAMILY</span><h2>Pets for Adoption</h2></div></div><p class="muted">Discover pets whose owners have listed them for adoption.</p><a class="btn btn-secondary" href="adoption.html">Browse Adoption Pets</a></section><section class="card community-section"><div class="section-heading"><div><span class="eyebrow">NEIGHBOURHOOD ANIMALS</span><h2>Community Pets 🐾</h2></div></div><p class="muted">For animals without an owner — save the name locals know and where they are usually seen. Their QR has no Lost/Found or contact feature.</p><div class="pet-list" data-community-pet-list></div><div class="empty-state" data-empty-community hidden><p class="muted">No community pets added yet.</p><a class="btn btn-secondary" href="add-community-pet.html">Add a Community Pet</a></div></section>
+      <section class="card memorial-section"><div class="section-heading"><div><span class="eyebrow">LOVE THAT STAYS</span><h2>Forever in Our Hearts 🕊️</h2></div></div><p class="muted">Create a gentle memorial for a beloved pet who has passed away. Keep their story, photos, and the memories that will always matter.</p><div class="pet-list" data-memorial-list></div><div class="empty-state" data-empty-memorials><div class="page-icon">🕊️</div><h3>Every pawprint leaves a memory</h3><p class="muted">Your memorials will be kept separate from active and community pets.</p><a class="btn btn-secondary" href="add-memorial.html">Create a Memorial</a></div></section>
+      <div class="empty-state" data-empty-pets hidden>
+        <div class="page-icon">🐾</div>
+        <h2>No pets yet</h2>
+        <p class="muted">Add your first pet to create its permanent ReUnite identity.</p>
+        <a class="btn btn-primary" href="add-pet.html">Add Your Pet</a>
+      </div>
+    </main>
+  <nav class="bottom-nav">
+<a class="nav-item" href="home.html"><span>⌂</span><small>Home</small></a>
+<a class="nav-item" href="about.html"><span>ⓘ</span><small>About</small></a>
+<a class="nav-item" href="scanner.html"><span>⌾</span><small>Scanner</small></a>
+<a class="nav-item" href="pet.html"><span>🐾</span><small>Pet</small></a>
+
+<a class="nav-item" href="global.html"><span>🌍</span><small>Global</small></a>
+<a class="nav-item" href="account.html"><span>◯</span><small>Account</small></a>
+</nav>
+</div>
+<script src="app.js?v=fix20261128"></script>
+</body>
+</html>
